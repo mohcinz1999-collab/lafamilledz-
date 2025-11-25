@@ -1,0 +1,78 @@
+:root{
+  --bg1: #74ebd5;
+  --bg2: #ACB6E5;
+  --accent: #1e90ff;
+  --muted: #f5f6fa;
+}
+
+*{box-sizing:border-box}
+body{
+  font-family: "Arial", sans-serif;
+  margin:0;
+  padding:0;
+  direction:rtl;
+  background: linear-gradient(135deg,var(--bg1),var(--bg2));
+  color:#222;
+  min-height:100vh;
+}
+
+.screen{display:none;padding:18px}
+.screen.active{display:block}
+
+/* login */
+#login-screen{max-width:420px;margin:40px auto;background:rgba(255,255,255,0.06);padding:22px;border-radius:12px;text-align:center;color:#fff}
+#login-screen input{width:100%;padding:10px;margin:8px 0;border-radius:8px;border:none}
+#login-screen .row{display:flex;justify-content:center;gap:10px}
+#login-screen button{padding:10px 18px;border-radius:8px;border:none;background:#ff6b6b;color:#fff;cursor:pointer}
+.muted{color:rgba(255,255,255,0.8);font-size:13px}
+
+/* main */
+#main-screen{max-width:980px;margin:20px auto}
+header{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#fff}
+header h2{margin:0}
+#user-info{font-weight:bold}
+.small{padding:6px 10px;border-radius:8px;border:none;background:#3742fa;color:#fff;cursor:pointer}
+
+/* tabs */
+.tabs{display:flex;gap:8px;margin:14px 0}
+.tab-btn{padding:8px 12px;border-radius:10px;border:none;background:#1e90ff;color:#fff;cursor:pointer}
+.tab-btn.active{background:#fff;color:#1e90ff}
+
+/* sections */
+.tab{display:none}
+.tab.active{display:block}
+.box{background:#fff;padding:12px;border-radius:10px;max-height:360px;overflow:auto;box-shadow:0 6px 18px rgba(0,0,0,0.08)}
+
+/* chat */
+#chat-box .msg{margin-bottom:8px;padding:8px;border-radius:8px;background:#f1f2f6;display:flex;justify-content:space-between;align-items:center}
+.msg .meta{font-weight:bold;color:var(--accent);margin-right:8px}
+.msg button{border:none;background:transparent;cursor:pointer}
+
+/* quotes */
+.quote-item{margin-bottom:10px;padding:10px;border-radius:8px;background:#fff8e6;border:1px solid #ffe7a6;display:flex;justify-content:space-between;align-items:flex-start}
+.quote-actions{display:flex;gap:8px;align-items:center}
+
+/* inputs */
+.input-row{display:flex;gap:8px;margin-top:10px}
+.input-row input{flex:1;padding:10px;border-radius:8px;border:none}
+.input-row button{padding:10px 14px;border-radius:8px;border:none;background:#2ed573;color:#fff;cursor:pointer}
+
+/* ludo */
+#ludo-area{display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap}
+#ludo-board{width:260px;height:260px;display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:10px;border-radius:12px;background:#ffffffcc}
+.cell{position:relative;width:100%;padding-top:100%;background:#f1f2f6;border-radius:8px}
+.pawn{width:22px;height:22px;border-radius:50%;position:absolute;top:6px;left:6px;border:3px solid #333;transition:all .3s}
+.red{background:#ff4757}.blue{background:#1e90ff}.green{background:#2ed573}.yellow{background:#ffa502}
+.ludo-controls{min-width:220px}
+#roll-btn{padding:10px 16px;border-radius:8px;border:none;background:#3742fa;color:#fff;cursor:pointer}
+.danger{background:#ff4757;color:#fff;border:none;padding:8px 12px;border-radius:8px;cursor:pointer}
+
+/* admin log */
+.admin-actions{display:flex;gap:8px;margin:10px 0}
+#admin-log.small{max-height:160px}
+
+/* responsive */
+@media (max-width:700px){
+  #main-screen{padding:8px}
+  #ludo-area{flex-direction:column;align-items:center}
+}

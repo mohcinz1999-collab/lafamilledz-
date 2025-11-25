@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>La Famille — Online</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- LOGIN -->
+  <div id="login-screen" class="screen active">
+    <h1>La Famille</h1>
+    <input id="username" placeholder="اسم المستخدم" />
+    <input id="admin-pass" placeholder="كلمة سر الأدمن (اختياري)" type="password"/>
+    <div class="row">
+      <button id="btn-login">دخول</button>
+    </div>
+    <p class="muted">ادخل اسمك للانضمام. ادخل كلمة سر الأدمن للحصول على صلاحيات (mohcinrx).</p>
+  </div>
+
+  <!-- MAIN -->
+  <div id="main-screen" class="screen">
+    <header>
+      <h2>La Famille</h2>
+      <div id="user-info"></div>
+      <button id="btn-logout" class="small">خروج</button>
+    </header>
+
+    <nav class="tabs">
+      <button class="tab-btn active" data-show="chat">💬 الدردشة</button>
+      <button class="tab-btn" data-show="quotes">📝 الاقتباسات</button>
+      <button class="tab-btn" data-show="games">🎲 الألعاب</button>
+      <button class="tab-btn" data-show="admin" id="admin-tab" style="display:none">🔧 الأدمن</button>
+    </nav>
+
+    <!-- Chat -->
+    <section id="chat" class="tab active">
+      <div id="chat-box" class="box"></div>
+      <div class="input-row">
+        <input id="chat-input" placeholder="اكتب رسالة..." />
+        <button id="send-btn">إرسال</button>
+      </div>
+    </section>
+
+    <!-- Quotes -->
+    <section id="quotes" class="tab">
+      <div id="quotes-list" class="box"></div>
+      <div class="input-row">
+        <input id="quote-input" placeholder="اكتب اقتباس..." />
+        <button id="post-quote-btn">نشر</button>
+      </div>
+    </section>
+
+    <!-- Games -->
+    <section id="games" class="tab">
+      <h3>لعبة لودو مبسطة</h3>
+      <div id="ludo-area">
+        <div id="ludo-board">
+          <!-- 12 خانات مصغرة -->
+          <div class="cell" id="cell-0"></div>
+          <div class="cell" id="cell-1"></div>
+          <div class="cell" id="cell-2"></div>
+          <div class="cell" id="cell-3"></div>
+          <div class="cell" id="cell-4"></div>
+          <div class="cell" id="cell-5"></div>
+          <div class="cell" id="cell-6"></div>
+          <div class="cell" id="cell-7"></div>
+          <div class="cell" id="cell-8"></div>
+          <div class="cell" id="cell-9"></div>
+          <div class="cell" id="cell-10"></div>
+          <div class="cell" id="cell-11"></div>
+
+          <div class="pawn red" id="pawn-red"></div>
+          <div class="pawn blue" id="pawn-blue"></div>
+          <div class="pawn green" id="pawn-green"></div>
+          <div class="pawn yellow" id="pawn-yellow"></div>
+        </div>
+
+        <div class="ludo-controls">
+          <button id="roll-btn">🎲 رمي النرد</button>
+          <p id="dice-result">النرد: -</p>
+          <p id="ludo-turn">دور: -</p>
+          <button id="reset-ludo" class="small">إعادة لودو</button>
+        </div>
+      </div>
+      <p class="muted">اللعبة مشتركة — أي لاعب يضغط رمي النرد سيؤثر على جميع اللاعبين.</p>
+    </section>
+
+    <!-- Admin panel -->
+    <section id="admin" class="tab">
+      <h3>لوحة الأدمن</h3>
+      <p>أوامر الأدمن: حذف رسائل/اقتباسات، إعادة تعيين لودو.</p>
+      <div class="admin-actions">
+        <button id="clear-messages" class="danger">حذف كل الرسائل</button>
+        <button id="clear-quotes" class="danger">حذف كل الاقتباسات</button>
+        <button id="reset-ludo-admin" class="danger">إعادة تعيين لودو</button>
+      </div>
+      <div id="admin-log" class="box small"></div>
+    </section>
+  </div>
+
+  <!-- scripts (ES modules from Firebase CDN) -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
