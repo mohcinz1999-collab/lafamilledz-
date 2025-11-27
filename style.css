@@ -23,7 +23,7 @@ header {
 }
 
 header h1 {
-    font-size: 2.5em;  /* تعديل الحجم ليكون مناسبًا للجوال */
+    font-size: 2.5em;
 }
 
 header p {
@@ -52,7 +52,7 @@ main {
     font-size: 1.3em;
     cursor: pointer;
     border-radius: 10px;
-    width: 70%;  /* تعديل العرض ليكون مناسب للجوال */
+    width: 70%;
     transition: 0.3s;
 }
 
@@ -105,35 +105,35 @@ footer p {
 /* Media Queries for mobile */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2em; /* تصغير العنوان على الشاشات الصغيرة */
+        font-size: 2em;
     }
 
     .btn {
-        font-size: 1.1em; /* تصغير حجم الخط للأزرار */
-        padding: 15px; /* تعديل الحجم للأزرار */
+        font-size: 1.1em;
+        padding: 15px;
     }
 
     .post {
-        padding: 10px; /* تصغير المسافات داخل المنشور */
+        padding: 10px;
     }
 }
 
 @media (max-width: 480px) {
     header h1 {
-        font-size: 1.5em; /* تصغير العنوان أكثر على الشاشات الصغيرة جدًا */
+        font-size: 1.5em;
     }
 
     .btn {
-        font-size: 1.2em; /* تصغير حجم الأزرار أكثر */
-        padding: 12px; /* تصغير الحجم للأزرار */
-        width: 80%; /* جعل الأزرار أكبر بالنسبة للشاشة الصغيرة */
+        font-size: 1.2em;
+        padding: 12px;
+        width: 80%;
     }
 
     .post {
-        padding: 8px; /* تصغير المسافات داخل المنشور */
+        padding: 8px;
     }
 
     footer p {
-        font-size: 0.8em; /* تصغير النص في التذييل */
+        font-size: 0.8em;
     }
 }
