@@ -23,11 +23,12 @@ header {
 }
 
 header h1 {
-    font-size: 2.5em;
+    font-size: 3em;
+    font-weight: bold;
 }
 
 header p {
-    font-size: 1em;
+    font-size: 1.2em;
     margin-top: 10px;
 }
 
@@ -39,7 +40,6 @@ main {
     margin-top: 40px;
 }
 
-/* Option Section */
 .option {
     margin-bottom: 20px;
 }
@@ -49,10 +49,10 @@ main {
     color: white;
     border: none;
     padding: 20px;
-    font-size: 1.3em;
+    font-size: 1.5em;
     cursor: pointer;
     border-radius: 10px;
-    width: 70%;
+    width: 60%;
     transition: 0.3s;
 }
 
@@ -83,7 +83,7 @@ main {
 }
 
 .post p {
-    font-size: 1em;
+    font-size: 1.2em;
 }
 
 /* Footer */
@@ -100,40 +100,4 @@ footer p {
 /* Hidden Class */
 .hidden {
     display: none;
-}
-
-/* Media Queries for mobile */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
-    }
-
-    .btn {
-        font-size: 1.1em;
-        padding: 15px;
-    }
-
-    .post {
-        padding: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5em;
-    }
-
-    .btn {
-        font-size: 1.2em;
-        padding: 12px;
-        width: 80%;
-    }
-
-    .post {
-        padding: 8px;
-    }
-
-    footer p {
-        font-size: 0.8em;
-    }
 }

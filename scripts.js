@@ -20,7 +20,7 @@ document.getElementById('posts-btn').addEventListener('click', function() {
 });
 
 function fetchFacebookPosts() {
-    const groupId = "2134361100431197"; // معرف المجموعة
+    const groupId = "861408493498529"; // معرف المجموعة
     const accessToken = "GG|861408493498529|MGjnNcG-1aO02ljjLLK20w7k2RY"; // توكن الوصول الخاص بك
 
     fetch(`https://graph.facebook.com/${groupId}/feed?access_token=${accessToken}`)
